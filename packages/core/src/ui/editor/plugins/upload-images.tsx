@@ -58,12 +58,12 @@ function findPlaceholder(state: EditorState, id: {}) {
 export function startImageUpload(file: File, view: EditorView, pos: number) {
   // check if the file is an image
   if (!file.type.includes("image/")) {
-    toast.error("File type not supported.");
+    toast.error("対応していないファイル形式です。");
     return;
 
     // check if the file size is less than 20MB
   } else if (file.size / 1024 / 1024 > 20) {
-    toast.error("File size too big (max 20MB).");
+    toast.error("ファイルサイズを超えています。 (最大 20MB)");
     return;
   }
 
@@ -144,8 +144,8 @@ export const handleImageUpload = (file: File) => {
         }
       }),
       {
-        loading: "Uploading image...",
-        success: "Image uploaded successfully.",
+        loading: "画像をアップロード中...",
+        success: "画像のアップロードに成功しました！",
         error: (e) => e.message,
       }
     );

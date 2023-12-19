@@ -24,31 +24,31 @@ type EditorBubbleMenuProps = Omit<BubbleMenuProps, "children">;
 export const EditorBubbleMenu: FC<EditorBubbleMenuProps> = (props) => {
   const items: BubbleMenuItem[] = [
     {
-      name: "bold",
+      name: "太字",
       isActive: () => props.editor.isActive("bold"),
       command: () => props.editor.chain().focus().toggleBold().run(),
       icon: BoldIcon,
     },
     {
-      name: "italic",
+      name: "斜体",
       isActive: () => props.editor.isActive("italic"),
       command: () => props.editor.chain().focus().toggleItalic().run(),
       icon: ItalicIcon,
     },
     {
-      name: "underline",
+      name: "下線",
       isActive: () => props.editor.isActive("underline"),
       command: () => props.editor.chain().focus().toggleUnderline().run(),
       icon: UnderlineIcon,
     },
     {
-      name: "strike",
+      name: "取り消し線",
       isActive: () => props.editor.isActive("strike"),
       command: () => props.editor.chain().focus().toggleStrike().run(),
       icon: StrikethroughIcon,
     },
     {
-      name: "code",
+      name: "コードしてマーク",
       isActive: () => props.editor.isActive("code"),
       command: () => props.editor.chain().focus().toggleCode().run(),
       icon: CodeIcon,

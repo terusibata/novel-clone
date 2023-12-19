@@ -16,78 +16,78 @@ interface ColorSelectorProps {
 
 const TEXT_COLORS: BubbleColorMenuItem[] = [
   {
-    name: "Default",
+    name: "デフォルト",
     color: "var(--novel-black)",
   },
   {
-    name: "Purple",
+    name: "紫",
     color: "#9333EA",
   },
   {
-    name: "Red",
+    name: "赤",
     color: "#E00000",
   },
   {
-    name: "Yellow",
+    name: "黄色",
     color: "#EAB308",
   },
   {
-    name: "Blue",
+    name: "青",
     color: "#2563EB",
   },
   {
-    name: "Green",
+    name: "緑",
     color: "#008A00",
   },
   {
-    name: "Orange",
+    name: "オレンジ",
     color: "#FFA500",
   },
   {
-    name: "Pink",
+    name: "ピンク",
     color: "#BA4081",
   },
   {
-    name: "Gray",
+    name: "グレー",
     color: "#A8A29E",
   },
 ];
 
 const HIGHLIGHT_COLORS: BubbleColorMenuItem[] = [
   {
-    name: "Default",
+    name: "デフォルト",
     color: "var(--novel-highlight-default)",
   },
   {
-    name: "Purple",
+    name: "紫",
     color: "var(--novel-highlight-purple)",
   },
   {
-    name: "Red",
+    name: "赤",
     color: "var(--novel-highlight-red)",
   },
   {
-    name: "Yellow",
+    name: "黄色",
     color: "var(--novel-highlight-yellow)",
   },
   {
-    name: "Blue",
+    name: "青",
     color: "var(--novel-highlight-blue)",
   },
   {
-    name: "Green",
+    name: "緑",
     color: "var(--novel-highlight-green)",
   },
   {
-    name: "Orange",
+    name: "オレンジ",
     color: "var(--novel-highlight-orange)",
   },
   {
-    name: "Pink",
+    name: "ピンク",
     color: "var(--novel-highlight-pink)",
   },
   {
-    name: "Gray",
+    name: "グレー",
     color: "var(--novel-highlight-gray)",
   },
 ];

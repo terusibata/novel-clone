@@ -77,24 +77,9 @@ const Command = Extension.create({
 const getSuggestionItems = ({ query }: { query: string }) => {
   return [
     {
-      title: "Continue writing",
-      description: "Use AI to expand your thoughts.",
-      searchTerms: ["gpt"],
-      icon: <Magic className="novel-w-7" />,
-    },
-    {
-      title: "Send Feedback",
-      description: "Let us know how we can improve.",
-      icon: <MessageSquarePlus size={18} />,
-      command: ({ editor, range }: CommandProps) => {
-        editor.chain().focus().deleteRange(range).run();
-        window.open("/feedback", "_blank");
-      },
-    },
-    {
-      title: "Text",
-      description: "Just start typing with plain text.",
-      searchTerms: ["p", "paragraph"],
+      title: "テキスト",
+      description: "すぐに文章を書き始められます。",
+      searchTerms: ["p", "paragraph", "text"],
       icon: <Text size={18} />,
       command: ({ editor, range }: CommandProps) => {
         editor
@@ -106,8 +91,8 @@ const getSuggestionItems = ({ query }: { query: string }) => {
       },
     },
     {
-      title: "To-do List",
-      description: "Track tasks with a to-do list.",
+      title: "ToDoリスト",
+      description: "ToDoリストでタスクを追跡します。",
       searchTerms: ["todo", "task", "list", "check", "checkbox"],
       icon: <CheckSquare size={18} />,
       command: ({ editor, range }: CommandProps) => {
@@ -115,8 +100,8 @@ const getSuggestionItems = ({ query }: { query: string }) => {
       },
     },
     {
-      title: "Heading 1",
-      description: "Big section heading.",
+      title: "見出し 1",
+      description: "大きいフォントのセッション見出しです。",
       searchTerms: ["title", "big", "large"],
       icon: <Heading1 size={18} />,
       command: ({ editor, range }: CommandProps) => {
@@ -129,8 +114,8 @@ const getSuggestionItems = ({ query }: { query: string }) => {
       },
     },
     {
-      title: "Heading 2",
-      description: "Medium section heading.",
+      title: "見出し 2",
+      description: "中くらいのフォントのセッション見出しです。",
       searchTerms: ["subtitle", "medium"],
       icon: <Heading2 size={18} />,
       command: ({ editor, range }: CommandProps) => {
@@ -143,8 +128,8 @@ const getSuggestionItems = ({ query }: { query: string }) => {
       },
     },
     {
-      title: "Heading 3",
-      description: "Small section heading.",
+      title: "見出し 3",
+      description: "小さめのフォントのセッション見出しです。",
       searchTerms: ["subtitle", "small"],
       icon: <Heading3 size={18} />,
       command: ({ editor, range }: CommandProps) => {
@@ -157,8 +142,8 @@ const getSuggestionItems = ({ query }: { query: string }) => {
       },
     },
     {
-      title: "Bullet List",
-      description: "Create a simple bullet list.",
+      title: "箇条書きリスト",
+      description: "シンプルな箇条書きのリストを作成します。",
       searchTerms: ["unordered", "point"],
       icon: <List size={18} />,
       command: ({ editor, range }: CommandProps) => {
@@ -166,8 +151,8 @@ const getSuggestionItems = ({ query }: { query: string }) => {
       },
     },
     {
-      title: "Numbered List",
-      description: "Create a list with numbering.",
+      title: "番号付きリスト",
+      description: "番号付きのリストを作成します。",
       searchTerms: ["ordered"],
       icon: <ListOrdered size={18} />,
       command: ({ editor, range }: CommandProps) => {
@@ -175,8 +160,8 @@ const getSuggestionItems = ({ query }: { query: string }) => {
       },
     },
     {
-      title: "Quote",
-      description: "Capture a quote.",
+      title: "引用",
+      description: "引用文を入力します。",
       searchTerms: ["blockquote"],
       icon: <TextQuote size={18} />,
       command: ({ editor, range }: CommandProps) =>
@@ -189,16 +174,16 @@ const getSuggestionItems = ({ query }: { query: string }) => {
           .run(),
     },
     {
-      title: "Code",
-      description: "Capture a code snippet.",
+      title: "コード",
+      description: "コードスニペットを入力します。",
       searchTerms: ["codeblock"],
       icon: <Code size={18} />,
       command: ({ editor, range }: CommandProps) =>
         editor.chain().focus().deleteRange(range).toggleCodeBlock().run(),
     },
     {
-      title: "Image",
-      description: "Upload an image from your computer.",
+      title: "画像",
+      description: "画像をアップロードして埋め込みます。",
       searchTerms: ["photo", "picture", "media"],
       icon: <ImageIcon size={18} />,
       command: ({ editor, range }: CommandProps) => {

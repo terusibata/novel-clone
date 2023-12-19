@@ -110,9 +110,9 @@ export const defaultExtensions = [
   Placeholder.configure({
     placeholder: ({ node }) => {
       if (node.type.name === "heading") {
-        return `Heading ${node.attrs.level}`;
+        return `見出し ${node.attrs.level}`;
       }
-      return "Press '/' for commands, or '++' for AI autocomplete...";
+      return "コマンドは半角「/」を入力...";
     },
     includeChildren: true,
   }),
